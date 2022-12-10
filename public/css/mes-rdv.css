@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Expletus+Sans&display=swap');
+
+h1{
+    padding: 10px;  
+    margin-top: 50px;
+   text-transform: uppercase;
+   text-align: center;
+   width: 100%;
+   background-color: #0099ff;
+   color: white; font-family: 'Expletus Sans';}
+       .cont{
+           height: 500px;
+           overflow-y: scroll;
+   
+   
+       }
+       button
+       {
+           color: white;
+           background-color: #ff2600;
+           opacity: 70%;
+           border: none;
+           border-radius: 5px;
+          
+           padding: 10px;
+           width: 80px;
+       }
+       .content-table {
+     border-collapse: collapse;
+     height: 120px;
+     font-size: 0.9em;
+     margin-top: 10px;
+     min-width: 400px;
+     margin-left: 250px;
+     
+     border-radius: 5px 5px 0 0;
+     overflow: hidden;
+     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+   }
+   
+   .content-table thead tr {
+     background-color: #0099ff;
+     color: #ffffff;
+     text-align: left;
+     font-weight: bold;
+   
+     
+   }
+   
+   .content-table th,
+   .content-table td {
+     height: 5px;
+     padding: 8px 20px;
+       
+    
+   }
+   
+   .content-table tbody tr {
+   
+     border-bottom: 1px solid #dddddd;
+   margin-bottom:15px ;
+   }
+   
+   .content-table tbody tr:nth-of-type(even) {
+     background-color: #f3f3f3;
+   }
+   
+   .content-table tbody tr:last-of-type {
+     border-bottom: 2px solid #0099ff;
+   }
+   
+   
+   

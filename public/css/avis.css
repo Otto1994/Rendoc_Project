@@ -1,0 +1,266 @@
+/* Stle reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Expletus+Sans&display=swap');
+
+
+
+body {
+  font-family: "Expletus Sans";
+  font-size: 1.2rem;
+  line-height: 1.6;
+  
+}
+
+a {
+  text-decoration: none;
+}
+img:hover, .full-name:hover, .user-name:hover {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Main Containers */
+.main-flex-container {
+  max-width: 1350px;
+  margin: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+
+
+}
+
+.center-flex-container {
+ flex: 3 0 45%;
+ background:#fff;
+}
+
+
+
+/* Main Container */
+
+
+/* Create Tweet box */
+.post-tweet {
+  background: rgb(224, 0, 0);
+  border-bottom: 10px solid rgb(230, 236, 240);
+  
+}
+.form-group-1 {
+  display: flex;
+  flex-flow: row;
+  padding: 0.3rem 1rem;
+}
+
+.post-tweet img {
+  display: inline-block;
+  margin-right: 5px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  align-self: center; 
+}
+
+.post-tweet input {
+  width: 90%;
+  height: 60px;
+  padding: 0.5rem 1rem;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+.post-tweet input::placeholder {
+  color: rgba(123, 124, 126, 0.719);
+}
+.post-tweet input:focus {
+  outline: none;
+}
+.form-group-2 {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.8rem;
+}
+
+.post-icons {
+  padding-left: 4rem;
+  color: #1da1f2;
+}
+.post-icons i {
+  padding-right: 10px;
+  font-size: 1.4rem;
+}
+.post-icons i:hover {
+  color: #1da0f2c2;
+  cursor: pointer;
+}
+.form-group-2 .btn {
+  border: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.7rem 1rem;
+  background: #8ed0f9;
+  color: #fff;
+  border-radius: 25px;
+  margin-right: 1rem;
+}
+.form-group-2 .btn:hover {
+  background: #1da1f2;
+  cursor: pointer;
+  
+}
+
+.btn:focus {
+  outline: none;
+}
+
+/* User Content */
+
+
+.tweets {
+  
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  font-size: 15px;
+  width: 100%;
+  margin-bottom: 10px;
+  line-height: 1.75rem;
+  padding-top: 0.5rem;
+overflow: scroll;
+  box-shadow: 0 5px 20px 0.1px rgb(105, 105, 105);
+  border-radius: 8px;
+
+}
+.tweets:hover {
+  background: rgb(245, 248, 250);
+}
+.full-name:hover {
+  text-decoration: underline;
+  
+}
+.user-content img {
+  border-radius: 20px;
+}
+.user-content {
+  width: 100%;
+  font-family: "Expletus Sans";
+  padding-right: 1rem;
+  color: rgb(48, 52, 56);
+  font-weight: 400;
+  line-height: 1.5;
+  
+}
+.user-content a {
+  color: rgb(27, 149, 224);
+}
+
+.user-content-box {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  color: rgb(20, 23, 26);
+  margin-left: 15px;
+}
+
+.user-content-box .user-names {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.user-names .full-name {
+  padding-right: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: rgb(20, 23, 26);
+}
+.user-names .user-name {
+  padding-right: 10px;
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: rgb(101, 119, 134);
+}
+.time {
+  color: rgb(101, 119, 134);
+  font-size: 12px;
+}
+.user-names i {
+  padding-top: 0.6rem;
+  margin-left: 50%;
+  color: rgb(101, 119, 134);
+
+}
+.content-icons {
+  display: inline-block;
+
+  justify-content: center;
+  align-items:center;
+  padding: 1rem 4rem 1rem 0;
+}
+.content-icons .in{
+  display: block;
+  border:none;
+border-radius: 8px;
+width: 100%;
+padding: 10px;
+background-color: rgb(233, 233, 233);
+color: #000;
+font-family: "Expletus Sans";
+height: 40px;
+
+} .rep{
+  display: flex;
+  gap: 10px;
+}
+.rep a{
+  border: 1px solid #198ed6;
+  border-radius: 8px;
+   height: 40px;
+  padding: 6px 15px 0px 15px;
+  margin-top: 1px;
+  background-color: rgb(233, 233, 233);
+  color: #000;
+  font-family: "Expletus Sans";
+  transition: 0.5s;
+  background:none;
+}
+.rep a:hover{
+  background-color: #0074a1;
+  color: #fff;
+}
+
+.content-icons .repo{
+  display: block;
+  color: #000;
+  border: 1px solid #198ed6;
+border-radius:8px  ;
+font-family: "Expletus Sans";
+background:none;
+padding: 8px; margin-bottom: 5px;
+width: 95px;
+transition: 0.5s;
+margin-left: 80%;
+
+}
+.content-icons .repo:hover{
+  background-color: #0074a1;
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+

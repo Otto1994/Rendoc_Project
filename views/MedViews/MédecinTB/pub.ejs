@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!--=== Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/3405f03f1d.js" ></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="/css/styleMed.css">
+    <link rel="stylesheet" href="/css/avis.css">     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <title>Médecin Tableau de bord</title>
+</head>
+<body>
+    <nav>
+        <div  class="logo-name" > 
+            <!--<div class="logo-image">
+                  <img src="images/logo.png" alt="">
+              </div>-->  
+              <a href="http://localhost:3000/rendoc/index" class="logo">
+                <img src="/images/logo.png" alt="">
+              </a>
+          </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="http://localhost:3000/rendoc/med">
+                    <i class="uil uil-estate"></i>
+                    <span class="link-name">Tableau de bord</span>
+                </a></li>
+                <li><a href="http://localhost:3000/rendoc/medStat">
+                  <i class="fa-solid fa-chart-column"></i>     
+                   <span class="link-name">Statistique Rendez-vous</span>
+              </a></li>
+                <li><a href="http://localhost:3000/rendoc/medListRDV">
+                  <i class="fa-solid fa-calendar-check"></i>
+                  <span class="link-name">Gérer les rendez-vous</span>
+              </a></li>
+            <li><a href="http://localhost:3000/rendoc/medListPat">
+                <i class="fa-solid fa-hospital-user"></i>
+                <span class="link-name">Listes des patients</span>
+            </a></li>
+            <li><a href="http://localhost:3000/rendoc/medPub">
+                <i class="fa-solid fa-lightbulb"></i>
+                <span class="link-name">Avis Médiceaux</span>
+            </a></li>
+            
+            </ul>
+            
+            <ul class="logout-mode">
+              <li><a href="http://localhost:3000/rendoc/medProfil">
+                <i class="fa-solid fa-user"></i>
+                <span class="link-name">Profile</span>
+            </a></li>
+                <li><a href="http://localhost:3000/rendoc/Authentification">
+                    <i class="uil uil-signout"></i>
+                    <span class="link-name">Déconnecter</span>
+                </a></li>
+
+              
+
+            <!--     <li class="mode">
+                    <a href="#">
+                        <i class="uil uil-moon"></i>
+                    <span class="link-name">Mode Nuit</span>
+                </a>-->
+
+                <div class="mode-toggle">
+                  <span class="switch"></span>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+
+            <div class="search-box">
+              <form action="rechercheDate4" method="post">
+                <button class="btRech" type="submit"><i class="uil uil-search" ></i></button>
+                <input type="text"  name="emailpat" placeholder="E-mail du patient" >
+            </form>
+            </div>
+            
+            <span class="rr">Dr. <%= nomMed  %> <%= prenomMed %></span>
+        </div>
+
+        <div class="dash-content">
+           
+                <div class="title">
+                    <i class="fa-solid fa-list-check"></i>
+                    <span class="text">Patients posts</span>
+                </div>
+         <div>
+            <div class="main-flex-container">
+    
+
+                <div class="center-flex-container flex-item">
+                
+            
+                  <div class="post-tweet">
+                   
+            
+                  </div>
+                  <!-- User Content -->
+                  <% for(var i=0 ; i < tu.length ; i++ ) { %>
+                  <form action="medPub"  method="post">
+                    <div class="tweets">
+                      
+                      <div class="user-content-box">
+                        <div class="user-names">
+                          <hi class="full-name"><%= tu [i].nom %></hi>
+                          <p class="user-name"><%= tu [i].email %></p>
+                          <p class="time">le <%= tu [i].dateMessage %></p>
+                        </div>
+                        
+                        <div class="user-content">
+                          <p><%= tu [i].message %></p>
+                          <p><b>Votre reponse :</b> <%= tu [i].reponse %></p>
+                        </div>
+            
+                        <div class="content-icons">
+                        
+                          
+                          <div class="rep" >
+                            <textarea class="in" placeholder="Repondre ici" name="message"></textarea>
+                            <input type="hidden" name="idpub" value="<%= tu [i].ida %>">
+                            <button id="comment" type="submit"><ion-icon name="send-outline"></ion-icon></button>
+                           
+                        
+                         
+                        </div>
+                        </div>
+              
+                      </div>
+                    </div>
+                
+                    </form>
+                    <% } %>
+                    
+            
+                 
+            
+                    
+            
+                    
+            
+                    
+            
+                  
+                </div>
+            
+                
+            
+               
+                
+              </div>
+              
+        
+
+
+
+         </div>
+
+
+
+   
+</div>
+    </section>
+
+    <script src="/js/Med/script.js"></script>
+</body>
+</html>

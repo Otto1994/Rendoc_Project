@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!--=== Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/3405f03f1d.js" ></script>
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="/css/styleMed.css">
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <title>Médecin Tableau de bord</title>
+</head>
+<body onload="initClock()">
+    <nav>
+        <div  class="logo-name" > 
+            <!--<div class="logo-image">
+                  <img src="images/logo.png" alt="">
+              </div>-->  
+              <a href="http://localhost:3000/rendoc/Med" class="logo">
+                <img src="/images/logo.png" alt="">
+              </a>
+              
+          </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="http://localhost:3000/rendoc/Med">
+                    <i class="uil uil-estate"></i>
+                    <span class="link-name">Tableau de bord</span>
+                </a></li>
+                <li><a href="http://localhost:3000/rendoc/medStat">
+                    <i class="fa-solid fa-chart-column"></i>     
+                     <span class="link-name">Statistique Rendez-vous</span>
+                </a></li>
+                <li><a href="http://localhost:3000/rendoc/medListRDV">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    <span class="link-name">Gérer des rendez-vous</span>
+                </a></li>
+                <li><a href="http://localhost:3000/rendoc/medListPat">
+                    <i class="fa-solid fa-hospital-user"></i>
+                    <span class="link-name">Listes des patients</span>
+                </a></li>
+                <li><a href="http://localhost:3000/rendoc/medpub">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <span class="link-name">Avis Médiceaux</span>
+                </a></li>
+                
+                
+            </ul>
+            
+            <ul class="logout-mode">
+                <li><a href="http://localhost:3000/rendoc/medProfil">
+                    <i class="fa-solid fa-user"></i>
+                    <span class="link-name">Profile</span>
+                </a></li>
+                <li><a href="http://localhost:3000/rendoc/Authentification">
+                    <i class="uil uil-signout"></i>
+                    <span class="link-name">Déconnecter</span>
+                </a></li>
+              
+
+             <!--     <li class="mode">
+                    <a href="#">
+                        <i class="uil uil-moon"></i>
+                    <span class="link-name">Mode Nuit</span>
+                </a>-->
+
+                <div class="mode-toggle">
+                  <span class="switch"></span>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+  
+           
+       
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+            
+            <div class="search-box">
+            <form action="rechercheDate" method="post">
+                <button class="btRech" type="submit"><i class="uil uil-search" ></i></button>
+                <input type="date"  name="dateRech">
+            </form>
+            </div>
+           
+            
+            <span class="rr">Dr. <%= nomMed  %> <%= prenomMed %> </span>
+        </div>
+
+        <div class="dash-content">
+            <div class="overview">
+                <div class="title">
+                    <i class="uil uil-tachometer-fast-alt"></i>
+                    <span class="text">Bonjour Dr. <%= nomMed  %> <%= prenomMed %> </span>
+                </div>
+                    <!--digital clock start-->
+                 <div class="datetime">
+                   <div class="date">
+                   <span id="nomdujour">Day</span>
+                     <span id="mois">Month</span>
+                  <span id="jour">00</span>
+                  <span id="annee">Year</span>
+               </div>
+              <div class="time">
+                   <span id="heure">00</span>:
+                     <span id="minutes">00</span>:
+                   <span id="secondes">00</span>
+          
+               </div>
+                </div>
+                   <!--digital clock end-->
+                   <script src="/js/Med/heure.js">
+  
+                </script>
+            </div>
+            <div class="table_section">
+                <h1>Vos Rendez-vous</h1>
+                <table class="table-rdv">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Heure</th>
+                           
+                            <th>Status</th>
+                            <th>ID patient</th>
+                            <th>Action</th>
+                            <th>Supprimer</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <% for(var i = 0 ; i < tu.length ; i++) { %>
+    
+                        <tr>
+                            <td><%= tu [i].dateR  %></td>
+                            <input type="hidden" name="d" value="<%= tu [i].dateR %>" >
+                            <td><%= tu [i].heureR  %></td>
+                            <td><%= tu [i].statusR %></td>
+                            <td><%= tu [i].patientID %></td>
+                            <td> <a href="http://localhost:3000/rendoc/med/valide/<%= tu [i].numR %>"> <button>Valider</i></button></a> </td>
+                            <td><a href="http://localhost:3000/rendoc/med/supprimer/<%= tu [i].numR %>"><button class="supprimer">Supprimer</button></a></td>
+                        </tr>   
+                        <% } %>
+                        
+                      
+                      
+                    </tbody>
+                </table>
+            </div>
+
+       
+           
+        </div>
+       
+    </section>
+
+    <script src="/js/Med/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/css/recherche.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://kit.fontawesome.com/3405f03f1d.js" ></script>
+    <title>Prendre un rendez-vous</title>
+</head>
+
+<body>
+	<header>
+    
+        <div class="container" id="rouh">
+    
+          <a href="http://localhost:3000/rendoc/Pat" class="logo">
+			<img src="/images/logo.png" alt="RENDOC">
+          </a>
+    
+          <div class="navbar-wrapper">
+    
+    
+            <nav class="navbar" data-navbar="">
+    
+              <ul class="navbar-list">
+    
+               
+                  <a href="http://localhost:3000/rendoc/index" class="nav-link">Accueil</a>
+                  <i class="fa-solid fa-house-chimney"></i>
+                
+    
+                
+    
+            
+                  <a href="http://localhost:3000/rendoc/mesRDV" class="nav-link">Mes rendez-vous</a>
+                  <i class="fa-solid fa-list-check"></i>
+                
+    
+              
+               
+                
+				<a href="http://localhost:3000/rendoc/avisPat" class="nav-link">Avis médical</a>
+				<i class="fa-solid fa-question"></i>
+			  
+
+    
+              </ul>
+    
+             <a href="http://localhost:3000/rendoc/Authentification"> <button class="btn-primary"> Se déconnecter <i class="fa-solid fa-arrow-right-from-bracket"></i></button></a>
+			 <a href="http://localhost:3000/rendoc/profilPat" class="nav-link" id="user"> <i class="fa-solid fa-user"></i></a>
+            </nav>
+    
+          </div>
+    
+        </div>
+    
+      </header>
+
+
+	
+    <!-- Formulaire rendez-vous -->
+		<section id="appointment">
+			<div class="container">
+				<div class="formul">
+					<h3>Rechercher votre Médecin</h3>
+					<form action="" method="post">
+					
+						<div class="search-box" id="search" aria-hidden="false" >
+							<input class="search-txt" type="text" name="recherche" placeholder="Rechercher votre médecin">
+							
+						</div>
+				
+					<div id="recherche2">
+				
+					
+						<!--<input type="radio" name="data" id="Genéraliste" onclick="text(0)"><label for="">Genéraliste</label> 
+						<input type="radio" name="data" id="Spécialiste" onclick="text(1)" ><label for="">Spécialiste</label>
+						-->
+						<div id="Spé" >
+							<label for="">Spécialité :</label>
+							<select name="Spécialité" class="select-spe" >
+								<option value="Selectionner" >Selectionner</option>
+								<option value= "Genéraliste" >Genéraliste</option>
+								<option value= "Dermatologue" >Dermatologue</option>
+								<option value= "Cardiologue">Cardiologue</option>
+							  </select>
+						</div>
+						<div id="wilaya">
+							<span class="wilaya-l">Wilaya :</span>
+						   <select name="Wilaya">
+							   <option  >Selectionner</option>
+							   <option>Adrar</option>
+							   <option>Chlef</option>
+							   <option>Laghouat</option>
+								 <option>Oum El Bouaghi</option>
+								 <option>Batna</option>
+								 <option value="Béjaia">Béjaia</option>
+								 <option>Biskra</option>
+								   <option>Béchar</option>
+								   <option>Blida</option>
+								   <option>Bouira</option>
+								   <option>Tamanrasset</option>
+									 <option>Tébessa</option>
+									 <option>Tlemcen</option>
+									 <option>Tiaret</option>
+									 <option>Tizi Ouzou</option>
+									   <option>Alger</option>
+									   <option>Djelfa</option>
+									   <option>Jijel</option>
+									   <option>Sétif</option>
+										 <option>Saïda</option>
+										 <option>Skikda</option>
+										 <option>Sidi Bel Abbès</option>
+										 <option>Annaba</option>
+										 <option>Guelma</option>
+										 <option>Constantine</option>
+										   <option>Médéa</option>
+										   <option>Mostaganem</option>
+										   <option>Msila</option>
+										   <option>Mascara</option>
+										   <option>Ouargla	</option>
+										   <option>Oran</option>
+											 <option>El Bayadh</option>
+											 <option>Illizi</option>
+											 <option>Bordj Bou Arreridj</option>
+											 <option>Boumerdès	</option>
+											 <option>El Tarf</option>
+											 <option>Tindouf</option>
+											 <option>Tissemsilt</option>
+											 <option>El Oued</option>
+											 <option>Khenchela</option>
+											 <option>Souk Ahras</option>
+											 <option>Tipaza</option>
+											 <option >Mila</option>
+											 <option >Aïn Defla</option>
+											 <option >Naâma</option>
+											 <option >Aïn Témouchent</option>
+											 <option >Ghardaïa</option>
+											 <option >Relizane</option>
+											 
+											 
+											 
+	   
+							</select>
+					   
+						</div>
+						<div class="btn-rechercher-bas">
+							<button type="submit">Rechercher</button>
+						</div>
+						</div>
+					
+						
+                
+                 
+               
+							
+					</form>
+					
+				</div>
+			
+				
+				
+			</div>
+			<div>
+				<div class="table_responsive">
+					<table>
+					  <thead>
+						<tr>
+						  <th>Nom du médecin</th>
+						  <th>Téléphone</th>
+						  <Th>E-Mail</Th>
+						  <th>Adresse</th>
+						  <th>Action</th>
+						</tr>
+					  </thead>
+					  <tbody class="tablerecheerchebody">
+						<% for(var i=0 ; i< tu.length ; i++) { %>  
+						<tr>
+						  
+						  <td>Dr. <%= tu [i].nom %> <%= tu [i].prenom %> </td>
+						  <td><%= tu [i].tel %></td>
+						  <th><%= tu [i].email %></th>
+						  <th><%= tu [i].adresse %></th>
+						  
+						  <td>
+							<span class="consulter">
+							  <a href="http://localhost:3000/rendoc/rendez/<%= tu [i].id %>">Consulter</a>
+							
+							</span>
+						  </td>
+						</tr>
+						<% } %>
+					
+					   
+					  </tbody>
+					</table>
+				</div>
+				</div>
+		</section>
+		
+	   	<script src="/js/recherche.js"></script>
+		   <script ></script>
+		  
+		<!-- //Formulaire rendez-vous  -->
+		<footer>
+
+			<div class="footer-top">
+			  <div class="vv">
+		  
+				<div class="footer-brand">
+		  
+				  <a href="http://localhost:3000/rendoc/Pat" class="f">
+					<img src="/images/logo.png" alt="Funel logo">
+				  </a>
+		  
+				  <p class="footer-text">suivez-nous sur</p>
+		  
+				  <ul class="social-list">
+		  
+					<li>
+					  <a href="https://github.com/codewithsadee" class="social-link">
+						<ion-icon name="logo-github" role="img" class="md hydrated" aria-label="logo github"></ion-icon>
+					  </a>
+					</li>
+		  
+					<li>
+					  <a href="https://instagram.com/codewithsadee" class="social-link">
+						<ion-icon name="logo-instagram" role="img" class="md hydrated" aria-label="logo instagram"></ion-icon>
+					  </a>
+					</li>
+		  
+					<li>
+					  <a href="https://youtube.com/c/codewithsadee" class="social-link">
+						<ion-icon name="logo-youtube" role="img" class="md hydrated" aria-label="logo youtube"></ion-icon>
+					  </a>
+					</li>
+		  
+					<li>
+					  <a href="#" class="social-link">
+						<ion-icon name="logo-facebook" role="img" class="md hydrated" aria-label="logo facebook"></ion-icon>
+					  </a>
+					</li>
+		  
+				  </ul>
+		  
+				</div>
+		  
+				<div class="footer-link-box">
+		  
+					<div class="footer-link-box">
+
+						<ul class="footer-link-list">
+			  
+						  <li>
+							<h3 class="h4 link-title">Principal</h3>
+						  </li>
+			  
+						  <li>
+							<a href="http://localhost:3000/rendoc/Pat" class="footer-link">Accueil</a>
+						  </li>
+			  
+						  <li>
+							<a href="http://localhost:3000/rendoc/Pat" class="footer-link">Nos services</a>
+						  </li>
+			  
+						  <li>
+							<a href="http://localhost:3000/rendoc/contact" class="footer-link">Contact</a>
+						  </li>
+			  
+						</ul>
+			  
+						<ul class="footer-link-list">
+			  
+						  <li>
+							<h3 class="h4 link-title">Nos service</h3>
+						  </li>
+			  
+						  <li>
+							<a href="http://localhost:3000/rendoc/recherche" class="footer-link">Trouver un medecin</a>
+						  </li>
+			  
+						  <li>
+							<a href="http://localhost:3000/rendoc/avisPat" class="footer-link">Avis médical</a>
+						  </li>
+			  
+						  <li>
+							<a href="http://localhost:3000/rendoc/recherche" class="footer-link">Prendre un rendez-vous</a>
+						  </li>
+			  
+						</ul>
+			  
+						<ul class="footer-link-list">
+			  
+						  <li>
+							<h3 class="h4 link-title">A propos</h3>
+						  </li>
+			  
+						  <li>
+							<a href="http://localhost:3000/rendoc/recherche" class="footer-link">Nos médecins</a>
+						  </li>
+			  
+						 
+						  <li>
+							<a href="#" class="footer-link">Nos Conditions</a>
+						  </li>
+			  
+						</ul>
+			  
+				 
+			  
+		  
+				</div>
+		  
+			  </div>
+			</div>
+		  
+			<div class="footer-bottom">
+			  <p class="copyright">
+				© 2022 <a href="http://localhost:3000/rendoc/Pat">Rendoc</a> tout les droits sont reservé
+			  </p>
+			</div>
+		  
+		  </div></footer>
+</body>
+</html>

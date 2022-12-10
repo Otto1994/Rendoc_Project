@@ -1,0 +1,294 @@
+<html lang="fr" class="hydrated">
+<script>
+     window.addEventListener("scroll",function(){
+    				var header =document.querySelector("header");
+				header.classList.toggle("stcr",window.scrollY >0);
+			})
+      const textc = document.querySelector(".sec-text");
+//---lanimation--du--page--d'accueil--//
+            const textLoad = () => {
+                setTimeout(() => {
+                    textc.textContent = "RENDOC";
+                }, 0);
+                //1s = 1000 milliseconds
+            }
+    
+            textLoad();
+            setInterval(textLoad, 12000);
+</script>
+<head>
+  <meta charset="UTF-8"><style data-styles="">ion-icon{visibility:hidden}.hydrated{visibility:inherit}</style>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RENDOC</title>
+
+  <!-- 
+    - favicon link
+  -->
+  <link rel="shortcut icon" href="/images/logo.png" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="/css/indexPat.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<style type="text/css">@font-face { font-family: Roboto; src: url("chrome-extension://mcgbeeipkmelnpldkobichboakdfaeon/css/Roboto-Regular.ttf"); }</style></head>
+<script src="https://kit.fontawesome.com/3405f03f1d.js" ></script>
+<body id="top" cz-shortcut-listen="true">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header>
+ 
+    <div class="container" id="rouh">
+
+      <a href="http://localhost:3000/rendoc/Pat" class="logo">
+        <img src="/images/logo.png" alt="RENDOC">
+      </a>
+
+      <div class="navbar-wrapper">
+
+
+        <nav class="navbar" data-navbar="">
+
+          <ul class="navbar-list">
+
+           
+              <a href="http://localhost:3000/rendoc/Pat" class="nav-link">Accueil</a>
+              <i class="fa-solid fa-house-chimney"></i>
+            </li>
+
+            </li>
+
+        
+              <a href="http://localhost:3000/rendoc/mesRDV" class="nav-link">Mes rendez-vous</a>
+              <i class="fa-solid fa-list-check"></i>
+            </li>
+
+          
+              
+            <a href="http://localhost:3000/rendoc/avisPat" class="nav-link">Avis médical</a>
+            <i class="fa-solid fa-question"></i>
+            </li>
+    
+
+          </ul>
+
+         <a href="http://localhost:3000/rendoc/Authentification"> <button class="btn-primary"> Se déconnecter<i class="fa-solid fa-arrow-right-to-bracket"></i></button></button></a>
+         <a href="http://localhost:3000/rendoc/profilPat" class="nav-link" id="user"> <i class="fa-solid fa-user"></i></a>
+      
+       </li>
+        </nav>
+
+      </div>
+
+    </div>
+
+  </header>
+  <main>
+
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="hero" id="home">
+        <div class="container">
+
+          <div class="hero-content">
+            <img src="/images/back.png" alt="shape" class="shape-content">
+            <div class="animation">
+                <span class="text first-text">Bienvenue sur </span>
+                <span class="text sec-text">RENDOC</span>
+            </div>
+            <h1>Une vie saine est une vie riche!</h1>
+            <h3 class="hero-title">Des professionnels de santé à votre service</h3>
+
+            
+
+           <a href="http://localhost:3000/rendoc/recherche"> <button class="btn btn-primary">Prend un rendez-vous maintenant !</button></a>
+
+          </div>
+
+          <div class="hero-banner"></div>
+
+        </div>
+
+       
+      </section>
+
+
+
+
+
+      
+
+
+
+
+
+  
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer>
+
+    <div class="footer-top">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="http://localhost:3000/rendoc/Pat" class="logo">
+            <img src="/images/logo.png" alt="Rendoc ">
+          </a>
+
+          <p class="footer-text">Suivez-nous sur</p>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-github" role="img" class="md hydrated" aria-label="logo github"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram" role="img" class="md hydrated" aria-label="logo instagram"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-youtube" role="img" class="md hydrated" aria-label="logo youtube"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook" role="img" class="md hydrated" aria-label="logo facebook"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="footer-link-box">
+
+          <ul class="footer-link-list">
+
+            <li>
+              <h3 class="h4 link-title">Principal</h3>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Accueil</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Nos services</a>
+            </li>
+
+            <li>
+              <a href="http://localhost:3000/rendoc/contact" class="footer-link">Contact</a>
+            </li>
+
+          </ul>
+
+          <ul class="footer-link-list">
+
+            <li>
+              <h3 class="h4 link-title">Nos service</h3>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Trouver un medecin</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Avis médical</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Prendre un rendez-vous</a>
+            </li>
+
+          </ul>
+
+          <ul class="footer-link-list"  >
+
+            <li>
+              <h3 class="h4 link-title">A propos</h3>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Nos médecins</a>
+            </li>
+
+           
+            <li>
+              <a href="#" class="footer-link">Nos Conditions</a>
+            </li>
+
+          </ul>
+
+   
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="copyright">
+        © 2022 <a href="#">Rendoc</a> All right reserved
+      </p>
+    </div>
+
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #GO TO TOP
+  -->
+
+  <a href="#top" class="go-top" data-go-top="">
+    <ion-icon name="chevron-up-outline" role="img" class="md hydrated" aria-label="chevron up outline"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule="" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+
+</body></html>

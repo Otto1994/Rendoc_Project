@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>avis</title>
+  <link rel="stylesheet" href="/css/styleAvis.css">
+  <link rel="stylesheet" href="/css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script>
+      window.addEventListener("scroll",function(){
+             var header =document.querySelector("header");
+           header.classList.toggle("stcr",window.scrollY >0);
+         })
+         const textc = document.querySelector(".sect-text");
+  </script>
+  	<script src="https://kit.fontawesome.com/3405f03f1d.js" ></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+
+<span class="main_bg">
+
+</span>
+
+<!-- Modal -->
+<% for(var j=0 ; j < tup.length ;j++) { %>
+<div class="modal fade" id="exampleModalCenter<%= tup [j].ida %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Réponses</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <div class="titre">
+        <h5>Réponse du medecin <%= tup [j].nom %> <%= tup [j].email %></h5>
+        <h6><%= tup [j].dateReponse %></h6>
+       </div>
+        <p><%= tup [j].reponse %></p>
+        <hr>
+      </div>
+    
+      <div class="modal-footer">
+        <button type="button" class="Retour" data-dismiss="modal">Retour</button>
+  
+      </div>
+    </div>
+  </div>
+</div>
+<% } %>
+<% for(var l=0 ; l < tupr.length ;l++) { %>
+  <div class="modal fade" id="exampleModalCenter<%= tupr [l].ida %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Réponses</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+         <div class="titre">
+          <h5>Réponse du medecin <%= tupr [l].nom %> <%= tupr [l].email %></h5>
+          <h6><%= tupr [l].dateReponse %></h6>
+         </div>
+          <p><%= tupr [l].reponse %></p>
+          <hr>
+        </div>
+      
+        <div class="modal-footer">
+          <button type="button" class="Retour" data-dismiss="modal">Retour</button>
+    
+        </div>
+      </div>
+    </div>
+  </div>
+  <% } %>
+<header class="hi"> 
+  <div class="containe" id="rouh">
+
+    <a href="http://localhost:3000/rendoc/Pat" class="logo">
+<img src="/images/logo.png" alt="RENDOC">
+    </a> 
+    <div class="wrap">
+      <nav class="navb" data-navbar="">
+
+               
+            <a href="http://localhost:3000/rendoc/Pat" class="na-link" style="text-decoration: none;  font-weight: 700; font-size: 15px;   ">Accueil</a>
+            <i class="fa-solid fa-house-chimney"></i>
+          </li>
+          </li>
+            <a href="http://localhost:3000/rendoc/mesRDV" class="na-link" style="text-decoration: none;  font-weight: 700;  font-size: 15px;  ">Mes rendez-vous</a>
+            <i class="fa-solid fa-list-check"></i>
+          </li>
+          </li>
+  <a href="http://localhost:3000/rendoc/avisPat" class="na-link" style="text-decoration: none;   font-weight: 700; font-size: 15px;">Avis médical</a>
+  <i class="fa-solid fa-question"></i>
+  </li>
+
+       <a href="http://localhost:3000/rendoc/Authentification"  style=" text-decoration:none; "> <button class="btn-primar"> Se déconnecter <i class="fa-solid fa-arrow-right-from-bracket"></i></button></button></a>
+ <a href="http://localhost:3000/rendoc/profilPat" class="na-link" id="user" style="text-decoration: none; "> <i class="fa-solid fa-user"></i></a>
+      </nav>
+
+    </div>
+  </div>
+
+</header>
+
+ <div class="principale">
+
+ 
+
+    <!--------------------------------------------------------------------------->
+    <div class="main-flex-container" style="background: none ;">
+    
+
+      <div class="center-flex-container flex-item" style="border-radius:15px ;">
+        
+        <div class="right-flex-container flex-item" style="border-radius:15px ;">
+          <div class="search-box">
+            <form action="recherecheAvis" method="post">
+            <input type="text" placeholder="Rechercher sur d'autres avis" name="recherche">
+          <button type="submit" id="srch">    <i class="fas fa-search"></i></button>
+        </form>
+          </div>
+    
+          
+        
+        </div>
+        
+        
+        <!-- User Content -->
+        <% for(var k=0 ; k< tur.length ;k++) { %>
+          <div class="tweets">
+     
+            <div class="user-content-box">
+              <div class="user-names">
+                <hi class="full-name"><%= tur [k].nom %></hi>
+                <p class="user-name"><%= tur [k].email %></p>
+                <p class="time"> <%= tur [k].dateMessage %></p>
+                </div>
+              
+              <div class="user-content">
+                <p><%= tur [k].message %></p>
+
+              </div>
+              <div class="content-icons">
+                <button data-toggle="modal" data-target="#exampleModalCenter<%= tur [k].ida %>" class="addi">Réponse</button>
+           </div>
+    
+            </div>
+          </div>
+        <% } %>
+          
+  
+  
+      </div>
+  
+      
+  
+     
+    </div>
+      <!--------------------------------------------------------------------------->
+
+
+
+<div class="er">
+   <!--------------------------------------------------------------------------->
+  <div class="cont">
+    <div class="wrapper">
+      <section class="post">
+        <h3>Poster une publication </h3>
+        <form action="" class="amenzu" method="post">
+          <div class="content">
+            
+          
+          </div>
+          <textarea placeholder="Tappez ici pour poster vos besoins?" spellcheck="false" required="" name="message"></textarea>
+          
+          
+          <button class="b1" type="submit">Publier</button>
+        </form>
+		
+      </section>
+     
+    </div>
+
+
+ </div>
+  <!--------------------------------------------------------------------------->
+  <div class="mes-pub">
+    <h3 >Mes posts</h3>
+    <div class="place" >
+
+
+      <div class="avis">
+        <% for(var i =0 ; i<tu.length ; i++) { %>
+        <div class="mes-posts">
+     
+          <div class="user-content-box">
+            <div class="user-names">
+              <hi class="full-name"><%= tu [i].nom %></hi>
+              <p class="user-name"><%= tu [i].email %></p>
+              <p class="time"> . <%= tu [i].dateMessage %></p>
+              </div>
+            
+            <div class="user-content">
+              <p><%= tu [i].message %></p>
+  
+            </div>
+  
+            <div class="content-icons">
+              <button data-toggle="modal" data-target="#exampleModalCenter<%= tu [i].ida %>" class="addi">Réponse</button>
+            </div>
+  
+          </div>
+        </div>
+        <% } %>
+
+      </div>
+  
+      </div>
+  </div>
+</div>
+  </div>
+  		<!-- //Formulaire rendez-vous  -->
+				 <!-- pied de page -->
+				 <footer>
+
+					<div class="footer-top">
+					  <div class="vv">
+				  
+						<div class="footer-brand">
+				  
+						  <a href="#" class="f">
+							<img src="/images/logo.png" alt="Funel logo">
+						  </a>
+				  
+						  <p class="footer-text">suivez-nous sur</p>
+				  
+						  <ul class="social-list">
+				  
+							<li>
+							  <a href="https://github.com/codewithsadee" class="social-link">
+								<ion-icon name="logo-github" role="img" class="md hydrated" aria-label="logo github"></ion-icon>
+							  </a>
+							</li>
+				  
+							<li>
+							  <a href="https://instagram.com/codewithsadee" class="social-link">
+								<ion-icon name="logo-instagram" role="img" class="md hydrated" aria-label="logo instagram"></ion-icon>
+							  </a>
+							</li>
+				  
+							<li>
+							  <a href="https://youtube.com/c/codewithsadee" class="social-link">
+								<ion-icon name="logo-youtube" role="img" class="md hydrated" aria-label="logo youtube"></ion-icon>
+							  </a>
+							</li>
+				  
+							<li>
+							  <a href="#" class="social-link">
+								<ion-icon name="logo-facebook" role="img" class="md hydrated" aria-label="logo facebook"></ion-icon>
+							  </a>
+							</li>
+				  
+						  </ul>
+				  
+						</div>
+				  
+						<div class="footer-link-box">
+				  
+							<div class="footer-link-box">
+
+								<ul class="footer-link-list">
+					  
+								  <li>
+									<h3 class="h4 link-title">Principal</h3>
+								  </li>
+					  
+								  <li>
+									<a href="#" class="footer-link">Accueil</a>
+								  </li>
+					  
+								  <li>
+									<a href="#" class="footer-link">Nos services</a>
+								  </li>
+					  
+								  <li>
+									<a href="#" class="footer-link">Contact</a>
+								  </li>
+					  
+								</ul>
+					  
+								<ul class="footer-link-list">
+					  
+								  <li>
+									<h3 class="h4 link-title">Nos service</h3>
+								  </li>
+					  
+								  <li>
+									<a href="#" class="footer-link">Trouver un medecin</a>
+								  </li>
+					  
+								  <li>
+									<a href="#" class="footer-link">Avis médical</a>
+								  </li>
+					  
+								  <li>
+									<a href="#" class="footer-link">Prendre un rendez-vous</a>
+								  </li>
+					  
+								</ul>
+					  
+								<ul class="footer-link-list"  >
+					  
+								  <li>
+									<h3 class="h4 link-title">A propos</h3>
+								  </li>
+					  
+								  <li>
+									<a href="#" class="footer-link">Nos médecins</a>
+								  </li>
+					  
+								 
+								  <li>
+									<a href="#" class="footer-link">Nos Conditions</a>
+								  </li>
+					  
+								</ul>
+					  
+						 
+					  
+				  
+						</div>
+				  
+					  </div>
+					</div>
+				  
+					<div class="footer-bottom">
+					  <p class="copyright">
+						© 2022 <a href="#">Rendoc</a> tout les droits sont reservé
+					  </p>
+					</div>
+				  
+				  </footer>
+				  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+					<script nomodule="" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+				  
+				<a href="#home">
+					<span aria-hidden="true"></span>
+				</a>
+</body></html>

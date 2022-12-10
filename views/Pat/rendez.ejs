@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <script>     
+        window.addEventListener("scroll",function(){
+           var header =document.querySelector("header");
+       header.classList.toggle("stcr",window.scrollY >0);
+   })
+   </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        rendez-vous
+    </title>
+    <script src="https://kit.fontawesome.com/3405f03f1d.js" ></script>
+	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="/css/rendez-vous.css">
+
+</head>
+
+<body class="light">
+    <header>
+        <link rel="stylesheet" href="assets/css/rendez-vous.css">
+        <div class="container" id="rouh">
+    
+          <a href="http://localhost:3000/rendoc/Pat" class="logo">
+            <img src="/images/logo.png" alt="RENDOC">
+          </a>
+    
+          <div class="navbar-wrapper">
+    
+    
+            <nav class="navbar" data-navbar="">
+    
+              <ul class="navbar-list">
+    
+               
+                  <a href="http://localhost:3000/rendoc/Pat" class="nav-link">Accueil</a>
+                  <i class="fa-solid fa-house-chimney"></i>
+                
+    
+                
+    
+            
+                  <a href="http://localhost:3000/rendoc/mesRDV" class="nav-link">Mes rendez-vous</a>
+                  <i class="fa-solid fa-list-check"></i>
+                
+    
+              
+                  
+                <a href="http://localhost:3000/rendoc/avisPat" class="nav-link">Avis médical</a>
+                <i class="fa-solid fa-question"></i>
+                
+        
+    
+              </ul>
+    
+             <a href="http://localhost:3000/rendoc/Authentification"> <button class="btn-primary"> Se déconnecter<i class="fa-solid fa-arrow-right-to-bracket"></i></button></a>
+             <a href="http://localhost:3000/rendoc/profilPat" class="nav-link" id="user"> <i class="fa-solid fa-user"></i></a>
+          
+           
+            </nav>
+    
+          </div>
+    
+        </div>
+    
+      </header>
+
+	
+		
+		
+		
+
+				
+        
+  
+		 
+
+    <div class="cont">
+        <!---calendrier--des-rendez-vous----->
+        <div class="calendar">
+            <div class="calendar-header">
+                <span class="month-picker" id="month-picker">Avril</span>
+                <div class="year-picker">
+                    <span class="year-change" id="prev-year">
+                        <pre><</pre>
+                    </span>
+                   
+                    <span id="year">2022</span>
+                    <span class="year-change" id="next-year">
+                        <pre>></pre>
+                    </span>
+                </div>
+            </div>
+            <div class="calendar-body">
+                <div class="calendar-week-day">
+                    <div>Dim</div>
+                    <div>Lun</div>
+                    <div>Mar</div>
+                    <div>Mer</div>
+                    <div>Jeu</div>
+                    <div>Ven</div>
+                    <div>Sam</div>
+                </div>
+                <div class="calendar-days"></div>
+            </div>
+            <div class="calendar-footer">
+                
+            </div>
+            <div class="month-list"></div>
+        </div>
+    <!---Tabulation-du-rendez-vous----->
+        <div class="tabulation">
+            <div class="table_responsive">
+                <table>
+                  <thead>
+                    <tr>
+                 
+                    
+                      <th>Nom du médecin</th>
+                      <th>Date</th>
+                      <th>Heure</th>
+                      <th>Numéro RDV</th>
+                      <th>Prendre</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                   <% for(var i=0 ; i < tu.length ; i++) { %>   
+                    <tr>
+                      <form action="" method="post">
+                      <td>Dr. <%= tu [i].nom %> <%= tu [i].prenom %></td>
+                      <td><%= tu [i].dateR %></td>
+                      <td><%= tu [i].heureR %></td>
+                      <td class="nbb"><%= tu [i].numR %></td>
+                      <td>
+                        <input type="hidden" name="val" value="<%= tu [i].numR %>">
+                        <span class="action_btn">
+                            
+                          <button type="submit">Prendre</button>
+                        
+                        </span>
+                      </td>
+                    </form>
+                    </tr>
+                   <% } %> 
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            
+    </div>
+    <footer>
+
+        <div class="footer-top">
+          <div class="vv">
+      
+            <div class="footer-brand">
+      
+              <a href="#" class="f">
+                <img src="/images/logo.png" alt="Funel logo">
+              </a>
+      
+              <p class="footer-text">suivez-nous sur</p>
+      
+              <ul class="social-list">
+      
+                <li>
+                  <a href="https://github.com" class="social-link">
+                    <ion-icon name="logo-github" role="img" class="md hydrated" aria-label="logo github"></ion-icon>
+                  </a>
+                </li>
+      
+                <li>
+                  <a href="https://instagram.com/" class="social-link">
+                    <ion-icon name="logo-instagram" role="img" class="md hydrated" aria-label="logo instagram"></ion-icon>
+                  </a>
+                </li>
+      
+                <li>
+                  <a href="https://youtube.com" class="social-link">
+                    <ion-icon name="logo-youtube" role="img" class="md hydrated" aria-label="logo youtube"></ion-icon>
+                  </a>
+                </li>
+      
+                <li>
+                  <a href="#" class="social-link">
+                    <ion-icon name="logo-facebook" role="img" class="md hydrated" aria-label="logo facebook"></ion-icon>
+                  </a>
+                </li>
+      
+              </ul>
+      
+            </div>
+      
+            <div class="footer-link-box">
+              <div class="footer-link-box">
+
+                <ul class="footer-link-list">
+      
+                  <li>
+                    <h3 class="h4 link-title">Principal</h3>
+                  </li>
+      
+                  <li>
+                    <a href="#" class="footer-link">Accueil</a>
+                  </li>
+      
+                  <li>
+                    <a href="#" class="footer-link">Nos services</a>
+                  </li>
+      
+                  <li>
+                    <a href="#" class="footer-link">Contact</a>
+                  </li>
+      
+                </ul>
+      
+                <ul class="footer-link-list">
+      
+                  <li>
+                    <h3 class="h4 link-title">Nos service</h3>
+                  </li>
+      
+                  <li>
+                    <a href="#" class="footer-link">Trouver un medecin</a>
+                  </li>
+      
+                  <li>
+                    <a href="#" class="footer-link">Avis médical</a>
+                  </li>
+      
+                  <li>
+                    <a href="#" class="footer-link">Prendre un rendez-vous</a>
+                  </li>
+      
+                </ul>
+      
+                <ul class="footer-link-list">
+      
+                  <li>
+                    <h3 class="h4 link-title">A propos</h3>
+                  </li>
+      
+                  <li>
+                    <a href="#" class="footer-link">Nos médecins</a>
+                  </li>
+      
+                 
+                  <li>
+                    <a href="#" class="footer-link">Nos Conditions</a>
+                  </li>
+      
+                </ul>
+      
+         
+      
+      
+            </div>
+      
+          </div>
+        </div>
+      
+        <div class="footer-bottom">
+          <p class="copyright">
+            © 2022 <a href="#">RENDOC</a> tout les droits sont réservé
+          </p>
+        </div>
+      
+      </div></footer>
+    <script src="/js/rendez-vous.js"></script>
+    
+</body>
+
+</html>

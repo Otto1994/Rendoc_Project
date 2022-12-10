@@ -1,0 +1,264 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/contact.css">
+    <script src="https://kit.fontawesome.com/3405f03f1d.js" ></script>
+	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <title>contact</title>
+	<script>     
+		window.addEventListener("scroll",function(){
+		   var header =document.querySelector("header");
+	   header.classList.toggle("stcr",window.scrollY >0);
+   })
+   </script>
+</head>
+
+<body>
+	<header>
+
+		<div class="container" id="rouh">
+	
+		  <a href="http://localhost:3000/rendoc/index" class="logo">
+			<img src="/images/logo.png" alt="RENDOC">
+		  </a>
+	
+		  <div class="navbar-wrapper">
+	
+	
+			<nav class="navbar" data-navbar="">
+	
+			  <ul class="navbar-list">
+	
+			   
+				  <a href="http://localhost:3000/rendoc/index" class="nav-link">Accueil</a>
+				  <i class="fa-solid fa-house-chimney"></i>
+				</li>
+	
+				
+			  
+				  <a href="contact.html" class="nav-link">Contactez-nous</a>
+				  <i class="fa-solid fa-comments"></i>
+				</li>
+	
+			  </ul>
+	
+			 <a href="http://localhost:3000/rendoc/Authentification"> <button class="btn-primary"> S'identifier<i class="fa-solid fa-arrow-right-to-bracket"></i></button></button></a>
+	
+			</nav>
+	
+		  </div>
+	
+		</div>
+	
+	  </header>
+
+
+
+
+
+
+
+
+      
+		
+			<div class="cont">
+			
+	
+				<div class="form">
+				  <div class="contact-info">
+				
+					<p class="text">
+						Des professionnels de la santé à votre service 
+						
+					</p>
+					
+					<div class="info">
+						<div class="information">
+						  <img src="/images/imgAuth/location.png" class="icon" alt="" />
+						  <p>06000,Bejaia,Algérie</p>
+						</div>
+						<div class="information">
+						  <img src="/images/imgAuth/email.png" class="icon" alt="" />
+						  <p>rendoc.contact.dz@gmail.com</p>
+						</div>
+						<div class="information">
+						  <img src="/images/imgAuth/phone.png" class="icon" alt="" />
+						  <p>+213-123-456-789</p>
+						</div>
+					  </div>
+		  
+					
+				  </div>
+		  
+				  <div class="contact-form">
+					<span class="circle one"></span>
+					<span class="circle two"></span>
+		  
+					<form action="http://localhost:3000/rendoc/contact"  method="post">
+					  <h3 class="title">Contactez-nous</h3>
+					  <div class="input-container">
+						<input type="text" name="nom" class="input" />
+						<label for="">Nom</label>
+						<span>Nom</span>
+					  </div>
+					  <div class="input-container">
+						<input type="email" name="email" class="input" />
+						<label for="">Email</label>
+						<span>Email</span>
+					  </div>
+					
+					  <div class="input-container textarea">
+						<textarea  class="input" name="message1"></textarea> 
+						
+						<label for="">Message</label>
+						<span>Message</span>
+					  </div>
+					  <button class="btn" type="submit">Envoyer</button> 
+					</form>
+					<p class="msgerr"><%= err%> !</p>
+				  </div>
+				</div>
+			  </div>
+		  
+			  <script src="/js/Contact.js"></script>
+				
+			
+				
+
+       
+
+
+
+
+    
+
+      
+
+         	<!-- pied de page -->
+			 <footer>
+
+				<div class="footer-top">
+				  <div class="vv">
+			  
+					<div class="footer-brand">
+			  
+					  <a href="#" class="logo">
+						<img src="/images/logo.png" alt="Funel logo">
+					  </a>
+			  
+					  <p class="footer-text">suivez-nous sur</p>
+			  
+					  <ul class="social-list">
+			  
+						<li>
+						  <a href="https://github.com" class="social-link">
+							<ion-icon name="logo-github" role="img" class="md hydrated" aria-label="logo github"></ion-icon>
+						  </a>
+						</li>
+			  
+						<li>
+						  <a href="https://instagram.com/" class="social-link">
+							<ion-icon name="logo-instagram" role="img" class="md hydrated" aria-label="logo instagram"></ion-icon>
+						  </a>
+						</li>
+			  
+						<li>
+						  <a href="https://youtube.com" class="social-link">
+							<ion-icon name="logo-youtube" role="img" class="md hydrated" aria-label="logo youtube"></ion-icon>
+						  </a>
+						</li>
+			  
+						<li>
+						  <a href="#" class="social-link">
+							<ion-icon name="logo-facebook" role="img" class="md hydrated" aria-label="logo facebook"></ion-icon>
+						  </a>
+						</li>
+			  
+					  </ul>
+			  
+					</div>
+			  
+					<div class="footer-link-box">
+			  
+						<div class="footer-link-box">
+
+							<ul class="footer-link-list">
+				  
+							  <li>
+								<h3 class="h4 link-title">Principal</h3>
+							  </li>
+				  
+							  <li>
+								<a href="#" class="footer-link">Accueil</a>
+							  </li>
+				  
+							  <li>
+								<a href="#" class="footer-link">Nos services</a>
+							  </li>
+				  
+							  <li>
+								<a href="#" class="footer-link">Contact</a>
+							  </li>
+				  
+							</ul>
+				  
+							<ul class="footer-link-list">
+				  
+							  <li>
+								<h3 class="h4 link-title">Nos service</h3>
+							  </li>
+				  
+							  <li>
+								<a href="#" class="footer-link">Trouver un medecin</a>
+							  </li>
+				  
+							  <li>
+								<a href="#" class="footer-link">Avis médical</a>
+							  </li>
+				  
+							  <li>
+								<a href="#" class="footer-link">Prendre un rendez-vous</a>
+							  </li>
+				  
+							</ul>
+				  
+							<ul class="footer-link-list"  >
+				  
+							  <li>
+								<h3 class="h4 link-title">A propos</h3>
+							  </li>
+				  
+							  <li>
+								<a href="#" class="footer-link">Nos médecins</a>
+							  </li>
+				  
+							 
+							  <li>
+								<a href="#" class="footer-link">Nos Conditions</a>
+							  </li>
+				  
+							</ul>
+				  
+					 
+				  
+					</div>
+			  
+				  </div>
+				</div>
+			  
+				<div class="footer-bottom">
+				  <p class="copyright">
+					© 2022 <a href="#">Rendoc</a> tout les droits sont reservé
+				  </p>
+				</div>
+			  
+			  </footer>
+		<!-- //Pied de page -->
+
+
+</body>
+</html>

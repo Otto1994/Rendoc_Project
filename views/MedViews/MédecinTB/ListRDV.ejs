@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<!--=== Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/3405f03f1d.js" ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!----======== CSS ======== -->
+  
+    <link rel="stylesheet" href="/css/styleMed.css">
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <title>Médecin Tableau de bord</title>
+</head>
+<body>
+    <div class="modal fade" id="add" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+      
+               <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModallabel">Ajouter un rendez-vous</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" >&times; </span>
+                        </button>
+               </div>
+         <div class="modal-body">
+        <form action="" method="post">
+           
+            <div class="form-row" style="margin-left: auto;  ">
+             
+                <input name="date" type="date"  class="form-control" required="" id="tel">
+                <input type="time" id="email"   class="form-control" name="appt" min="08:00" max="16:00" required="" >
+                
+                  <div class="modal-footer">
+                    
+                    <input type="submit" class="Enregestrer" value="Enregister" >
+                    <input type="button"class="Retour"  data-dismiss="modal" value="Retour">
+                  </div>
+              </div>
+        </form>
+    </div>
+    
+    </div>
+    </div>
+</div>
+    <nav>
+        <div  class="logo-name" > 
+            <!--<div class="logo-image">
+                  <img src="images/logo.png" alt="">
+              </div>-->  
+              <a href="#" class="logo">
+                <img src="/images/logo.png" alt="">
+              </a>
+          </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="http://localhost:3000/rendoc/med">
+                    <i class="uil uil-estate"></i>
+                    <span class="link-name">Tableau de bord</span>
+                </a></li>
+                <li><a href="http://localhost:3000/rendoc/medStat">
+                    <i class="fa-solid fa-chart-column"></i>     
+                     <span class="link-name">Statistique Rendez-vous</span>
+                </a></li>
+            
+                <li><a href="http://localhost:3000/rendoc/medListRDV">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    <span class="link-name">Gérer les rendez-vous</span>
+                </a></li>
+                <li><a href="http://localhost:3000/rendoc/medListPat">
+                    <i class="fa-solid fa-hospital-user"></i>
+                    <span class="link-name">Listes des patients</span>
+                </a></li>
+                <li><a href="http://localhost:3000/rendoc/medpub">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <span class="link-name">Avis Médiceaux</span>
+                </a></li>
+                
+                
+            </ul>
+
+            
+            <ul class="logout-mode">
+                <li><a href="http://localhost:3000/rendoc/medProfil">
+                    <i class="fa-solid fa-user"></i>
+                    <span class="link-name">Profile</span>
+                </a></li>
+                <li><a href="http://localhost:3000/rendoc/Authentification">
+                    <i class="uil uil-signout"></i>
+                    <span class="link-name">Déconnecter</span>
+                </a></li>
+
+             <!--     <li class="mode">
+                    <a href="#">
+                        <i class="uil uil-moon"></i>
+                    <span class="link-name">Mode Nuit</span>
+                </a>-->
+
+                <div class="mode-toggle">
+                  <span class="switch"></span>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+
+            <div class="search-box">
+                <form action="rechercheDate2" method="post">
+                    <button class="btRech" type="submit"><i class="uil uil-search" ></i></button>
+                    <input type="date"  name="dateRech" placeholder="Date" >
+                </form>
+            </div>
+            <span class="rr">Dr. <%= nomMed  %> <%= prenomMed %></span>
+          
+        </div>
+
+        <div class="dash-content">
+            <div class="overview">
+                
+
+       
+            <div class="activity">
+                <div class="title">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    <span class="text">Liste des rendez-vous</span>
+                    <button data-target="#add" class="addi" data-toggle="modal">Ajouter</button>
+                </div>
+                <div class="table">
+        
+        
+                </div>
+                <div class="table_section">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Heure</th>
+                               
+                                <th>Numéro RDV</th>
+                        
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% for(var i=0 ; i < tu.length ; i++) { %>
+                            <tr>
+                                <td><%= tu [i].dateR  %></td>
+                                <td><%= tu [i].heureR  %></td>
+                            
+                                <td><%= tu [i].numR  %></td>
+                             
+                                <td>  <a href="http://localhost:3000/rendoc/medListRDV/supprimer/<%= tu [i].numR %>"><button class="supprimer">Supprimer</button></a> </td>
+                            </tr>
+                            <% } %>
+                        
+                          
+                          
+                        </tbody>
+                    </table>
+                </div>
+                
+            </div>
+                
+                </div>  
+            </div>
+          
+        </div>
+    </section>
+                
+                
+
+       
+           
+      
+       
+   
+
+    <script src="/js/Med/script.js"></script>
+</body>
+</html>
